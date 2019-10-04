@@ -25,3 +25,20 @@ function layers(image)
 
     return red, green, blue
 end
+
+"""
+PART 1.C
+---------
+Breaks the function with "BUG BUG BUG"
+"""
+
+function layers(image)
+    image = imread(image)
+    println("BUG BUG BUG")
+    imshow(convert(Array{Float32,3}, image))
+    red = image[:,:,1]
+    green = image[:,:,2]
+    blue = image[:,:,3]
+
+    return red, green, blue
+end
