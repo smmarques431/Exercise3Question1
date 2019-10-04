@@ -7,3 +7,21 @@ Reads the image "el-capitan.png" and prints it to the REPL
 julia> imread("el-capitan.png")
 elcapitan = imread("el-capitan.png")
 imshow(convert(Array{Float32,3}, elcapitan))
+
+"""
+PART 1.B
+----------
+Defines a function 'layers'
+Takes the image as an argument
+Returns the red, green, and blue channels as separate variables
+"""
+
+function layers(image)
+    image = imread(image)
+    imshow(convert(Array{Float32,3}, image))
+    red = image[:,:,1]
+    green = image[:,:,2]
+    blue = image[:,:,3]
+
+    return red, green, blue
+end
