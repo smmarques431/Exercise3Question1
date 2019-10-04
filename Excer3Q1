@@ -42,3 +42,26 @@ function layers(image)
 
     return red, green, blue
 end
+
+"""
+PART 1.E
+---------
+Creates a new matrix "image2"
+The new image switches the R G & B channels around
+Prints the original and inverted image side by side
+"""
+
+image2 = zeros(360, 640, 3)
+image2[:,:,1] = elcapitan[:,:,2]
+image2[:,:,2] = elcapitan[:,:,3]
+image2[:,:,3] = elcapitan[:,:,1]
+
+figure(figsize = [5,5])
+subplot(1,2,1)
+imshow(elcapitan)
+title("Original")
+axis("off")
+subplot(1,2,2);
+imshow(image2)
+title("Inverted Colors")
+axis("off")
