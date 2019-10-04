@@ -27,14 +27,14 @@ function layers(image)
 end
 
 """
-PART 1.C
+PART 1.D
 ---------
-Breaks the function with "BUG BUG BUG"
+Resets the previous function as mixed reset
 """
 
 function layers(image)
     image = imread(image)
-    println("BUG BUG BUG")
+    println("Reset with git reset --mixed")
     imshow(convert(Array{Float32,3}, image))
     red = image[:,:,1]
     green = image[:,:,2]
