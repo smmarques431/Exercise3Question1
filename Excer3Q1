@@ -1,0 +1,9 @@
+"""
+PART 1.A
+----------
+Reads the image "el-capitan.png" and prints it to the REPL
+"""
+
+julia> imread("el-capitan.png")
+elcapitan = imread("el-capitan.png")
+imshow(convert(Array{Float32,3}, elcapitan))
