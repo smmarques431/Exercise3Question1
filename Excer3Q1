@@ -65,3 +65,28 @@ subplot(1,2,2);
 imshow(image2)
 title("Inverted Colors")
 axis("off")
+
+"""
+PART B
+-------
+Defines a function that moves a number of elements in a matrix for a given image
+Takes two arguments: image and pixels
+Prints the picture of the original and rotated image side by side
+"""
+
+function rotation(image, pixels)
+    imshow(circshift(image, pixels))
+end
+
+
+imshow(circshift((elcapitan[:,:,1], 180))
+
+figure(figsize = [5,5])
+subplot(1,2,1)
+imshow(elcapitan)
+title("Original")
+axis("off")
+subplot(1,2,2);
+imshow(circshift(elcapitan[:,:,1], 180))
+title("Rotation")
+axis("off")
